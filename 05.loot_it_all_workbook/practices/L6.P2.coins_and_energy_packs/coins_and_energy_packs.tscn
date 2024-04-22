@@ -1,40 +1,40 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://x1obxyfp28ii"]
 
-[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.tscn" id="1_l7py2"]
-[ext_resource type="Script" path="res://practices/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.gd" id="2_mt54v"]
-[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/coin.tscn" id="3_v6eww"]
-[ext_resource type="Script" path="res://practices/L6.P2.coins_and_energy_packs/collectible.gd" id="4_ynkwx"]
-[ext_resource type="PackedScene" path="res://practices/L6.P2.coins_and_energy_packs/energy_pack.tscn" id="5_4aryi"]
+[ext_resource type="PackedScene" uid="uid://c5mxnntdi3k7a" path="res://addons/gdquest_practice_framework/practice_solutions/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.tscn" id="1_2ulll"]
+[ext_resource type="Script" path="res://practices/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.gd" id="2_37h8n"]
+[ext_resource type="PackedScene" uid="uid://cyl7qhg258h1r" path="res://addons/gdquest_practice_framework/practice_solutions/L6.P2.coins_and_energy_packs/coin.tscn" id="3_u5xgu"]
+[ext_resource type="Script" path="res://practices/L6.P2.coins_and_energy_packs/collectible.gd" id="4_fo3v1"]
+[ext_resource type="PackedScene" uid="uid://d0a1rfmu2wl88" path="res://addons/gdquest_practice_framework/practice_solutions/L6.P2.coins_and_energy_packs/energy_pack.tscn" id="5_obh07"]
 
 [node name="CoinsAndEnergyPacks" type="Node2D"]
 
-[node name="Ship" type="Area2D" parent="." instance=ExtResource("1_l7py2")]
+[node name="Ship" parent="." instance=ExtResource("1_2ulll")]
 position = Vector2(962, 534)
-script = ExtResource("2_mt54v")
+script = ExtResource("2_37h8n")
 
-[node name="Coin" type="Area2D" parent="." instance=ExtResource("3_v6eww")]
+[node name="Coin" parent="." instance=ExtResource("3_u5xgu")]
 position = Vector2(544, 336)
-script = ExtResource("4_ynkwx")
+script = ExtResource("4_fo3v1")
 
-[node name="EnergyPack" type="Area2D" parent="." instance=ExtResource("5_4aryi")]
+[node name="EnergyPack" parent="." instance=ExtResource("5_obh07")]
 position = Vector2(564, 707)
-script = ExtResource("4_ynkwx")
+script = ExtResource("4_fo3v1")
 
-[node name="Coin2" type="Area2D" parent="." instance=ExtResource("3_v6eww")]
+[node name="Coin2" parent="." instance=ExtResource("3_u5xgu")]
 position = Vector2(971, 862)
-script = ExtResource("4_ynkwx")
+script = ExtResource("4_fo3v1")
 
-[node name="EnergyPack2" type="Area2D" parent="." instance=ExtResource("5_4aryi")]
+[node name="EnergyPack2" parent="." instance=ExtResource("5_obh07")]
 position = Vector2(1337, 631)
-script = ExtResource("4_ynkwx")
+script = ExtResource("4_fo3v1")
 
-[node name="Coin3" type="Area2D" parent="." instance=ExtResource("3_v6eww")]
+[node name="Coin3" parent="." instance=ExtResource("3_u5xgu")]
 position = Vector2(1337, 284)
-script = ExtResource("4_ynkwx")
+script = ExtResource("4_fo3v1")
 
-[node name="EnergyPack3" type="Area2D" parent="." instance=ExtResource("5_4aryi")]
+[node name="EnergyPack3" parent="." instance=ExtResource("5_obh07")]
 position = Vector2(925, 168)
-script = ExtResource("4_ynkwx")
+script = ExtResource("4_fo3v1")
 
 [node name="ExtraVisuals" type="Node" parent="."]
 
