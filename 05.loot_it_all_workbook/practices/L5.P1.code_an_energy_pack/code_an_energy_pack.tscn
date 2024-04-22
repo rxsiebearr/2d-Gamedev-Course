@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://do460mxvq53yy"]
 
 [ext_resource type="PackedScene" path="res://practices/L5.P1.code_an_energy_pack/ship_energy_pack.tscn" id="1_jrchu"]
-[ext_resource type="PackedScene" path="res://practices/L5.P1.code_an_energy_pack/energy_pack.tscn" id="3_1o63n"]
+[ext_resource type="PackedScene" uid="uid://cym51crofshjv" path="res://practices/L5.P1.code_an_energy_pack/energy_pack.tscn" id="3_1o63n"]
 
 [node name="CodeAnEnergyPack" type="Node2D"]
 position = Vector2(960, 540)
