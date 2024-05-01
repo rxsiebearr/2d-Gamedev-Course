@@ -341,9 +341,7 @@ position = Vector2(405, 328)
 possible_items = Array[PackedScene]([ExtResource("8_bk6nq")])
 
 [node name="Bird" parent="." instance=ExtResource("11_advak")]
-visible = false
 position = Vector2(509, 422)
 
 [node name="Bird2" parent="." instance=ExtResource("11_advak")]
-visible = false
 position = Vector2(759, 255)
