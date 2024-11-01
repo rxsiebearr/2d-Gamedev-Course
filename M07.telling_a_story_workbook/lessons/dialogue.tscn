@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1oxblyn5sdsa"]
+[gd_scene load_steps=12 format=3 uid="uid://b1oxblyn5sdsa"]
 
+[ext_resource type="Theme" uid="uid://chbtl7pfpvugs" path="res://lessons/main_theme.tres" id="1_05mgn"]
 [ext_resource type="Shader" path="res://assets/sliding_background.gdshader" id="1_et5t6"]
 [ext_resource type="Texture2D" uid="uid://bwv3fpaugnj5n" path="res://assets/looopy.png" id="2_1ymxk"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="3_ytrqa"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="4_qhubd"]
+[ext_resource type="StyleBox" uid="uid://8eldg8wevhor" path="res://lessons/button_black.tres" id="6_0w8t0"]
+[ext_resource type="StyleBox" uid="uid://ldrn3gpt6b6e" path="res://lessons/button_grey.tres" id="7_kdk5y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vkatl"]
 shader = ExtResource("1_et5t6")
@@ -12,6 +15,40 @@ shader_parameter/pattern_color = Color(0.992353, 0.94601, 0.970321, 1)
 shader_parameter/pattern_size = 150.0
 shader_parameter/pattern_sampler = ExtResource("2_1ymxk")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mah4u"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+bg_color = Color(0, 0, 0, 0.352941)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6il7"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.662745, 0.0235294, 0.45098, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="Theme" id="Theme_knmjv"]
+Button/styles/disabled = SubResource("StyleBoxFlat_mah4u")
+Button/styles/focus = SubResource("StyleBoxFlat_u6il7")
+Button/styles/hover = ExtResource("7_kdk5y")
+Button/styles/normal = ExtResource("6_0w8t0")
+Button/styles/pressed = ExtResource("7_kdk5y")
+
 [node name="Dialogue" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -19,6 +56,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_05mgn")
 
 [node name="Backround" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_vkatl")
@@ -65,11 +103,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -14.0
 offset_top = 492.0
-offset_right = -146.0
-offset_bottom = -423.0
+offset_right = -32.0
+offset_bottom = -338.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_05mgn")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
 text = "pneomonoulttramicroscopicsilicovolcanoconiosis"
+fit_content = true
 
 [node name="NextButton" type="Button" parent="."]
 layout_mode = 1
@@ -84,5 +126,6 @@ offset_right = -8.0
 offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
+theme = SubResource("Theme_knmjv")
 text = "next
 "
