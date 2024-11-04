@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1oxblyn5sdsa"]
+[gd_scene load_steps=13 format=3 uid="uid://b1oxblyn5sdsa"]
 
 [ext_resource type="Theme" uid="uid://chbtl7pfpvugs" path="res://lessons/main_theme.tres" id="1_05mgn"]
 [ext_resource type="Shader" path="res://assets/sliding_background.gdshader" id="1_et5t6"]
 [ext_resource type="Texture2D" uid="uid://bwv3fpaugnj5n" path="res://assets/looopy.png" id="2_1ymxk"]
+[ext_resource type="Script" path="res://lessons/dialogue.gd" id="2_6xnwv"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="3_ytrqa"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="4_qhubd"]
 [ext_resource type="StyleBox" uid="uid://8eldg8wevhor" path="res://lessons/button_black.tres" id="6_0w8t0"]
@@ -57,6 +58,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_05mgn")
+script = ExtResource("2_6xnwv")
 
 [node name="Backround" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_vkatl")
@@ -96,6 +98,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -104,7 +107,7 @@ anchor_bottom = 1.0
 offset_left = -14.0
 offset_top = 492.0
 offset_right = -32.0
-offset_bottom = -338.0
+offset_bottom = -386.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_05mgn")
@@ -114,6 +117,7 @@ text = "pneomonoulttramicroscopicsilicovolcanoconiosis"
 fit_content = true
 
 [node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
