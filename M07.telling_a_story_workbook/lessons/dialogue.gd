@@ -27,5 +27,6 @@ func advance() -> void:
 	current_item_index += 1
 	if current_item_index == dialogue_items.size():
 		get_tree().quit()
-	else: show_text()
+	else: 
+		show_text()
 	
