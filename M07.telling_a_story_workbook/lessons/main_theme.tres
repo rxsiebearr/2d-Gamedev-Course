@@ -13,5 +13,7 @@ corner_radius_bottom_left = 32
 
 [resource]
 default_font_size = 48
+HBoxContainer/constants/separation = 20
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_mcpqn")
+VBoxContainer/constants/separation = 20
