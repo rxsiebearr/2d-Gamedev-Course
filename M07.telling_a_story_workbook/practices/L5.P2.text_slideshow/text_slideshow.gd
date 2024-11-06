@@ -22,6 +22,6 @@ func _ready() -> void:
 # Increments the index each time is called.
 func advance() -> void:
 	item_index += 1
-	if item_index >= items.size() - 1:
+	if item_index >= items.size():
 		item_index = 0
 	show_text()
