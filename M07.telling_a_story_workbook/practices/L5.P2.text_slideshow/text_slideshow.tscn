@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs8f7wbhe8hhr"]
+[gd_scene load_steps=4 format=3 uid="uid://dfiiffbjg46ob"]
 
 [ext_resource type="Material" uid="uid://blciib2n6bpvf" path="res://practices/L6.P1.poetry/assets/practice_background_material.tres" id="1_oi7d2"]
 [ext_resource type="Theme" uid="uid://bnmph65g7q2l3" path="res://practices/L5.P2.text_slideshow/assets/practice_exercises_theme.tres" id="2_uqs78"]

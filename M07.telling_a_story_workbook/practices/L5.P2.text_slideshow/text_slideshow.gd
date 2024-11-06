@@ -24,5 +24,4 @@ func advance() -> void:
 	item_index += 1
 	if item_index >= items.size() - 1:
 		item_index = 0
-	else:
-		show_text()
+	show_text()
