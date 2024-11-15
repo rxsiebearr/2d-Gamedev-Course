@@ -3,23 +3,60 @@ extends Control
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
 @onready var next_button: Button = %NextButton
+@onready var body: TextureRect = %Body
+@onready var expression: TextureRect = %Expression
 
-var dialogue_items: Array[String] = [
-	"LALALALA LALALALA",
-	"Elmos World! (Elmos World)",
-	"LALALALA LALALALA",
-	"Elmos World! (Elmos World)",
-	"Elmo loves his goldfish!",
-	"His crayon too!",
-	"...",
-	"And that's Elmo's World!!",
-	"YEAH!",
+var expressions := {
+	"happy": preload("res://assets/emotion_happy.png"),
+	"regular": preload("res://assets/emotion_regular.png"),
+	"sad": preload("res://assets/emotion_sad.png"),
+}
+
+var dialogue_items: Array[Dictionary] = [
+{
+	"expression": expressions["happy"],
+	"text": "LALALALA LALALALA"
+},
+{
+	"expression": expressions["regular"],
+	"text": "Elmos World! (Elmos World)"
+},
+{	
+	"expression": expressions["happy"],
+	"text": "LALALALA LALALALA"
+},
+{
+	"expression": expressions["regular"],
+	"text": "Elmos World! (Elmos World)"
+},
+{
+	"expression": expressions["sad"],
+	"text": "Elmo loves his goldfish!"
+},
+{	
+	"expression": expressions["happy"],
+	"text": "His crayon too!"
+},
+{
+	"expression": expressions["regular"],
+	"text": "..."
+},
+{
+	"expression": expressions["happy"],
+	"text": "And that's Elmo's World!!"
+},
+{
+	"expression": expressions["happy"],
+	"text": "YEAH!"
+}
 ]
+
 var current_item_index := 0
 
 func show_text() -> void:
 	var current_item := dialogue_items[current_item_index]
-	rich_text_label.text = current_item
+	rich_text_label.text = current_item["text"]
+	expression.texture = current_item["expression"]
 	rich_text_label.visible_ratio = 0.0
 	var tween := create_tween()
 	var text_appearing_duration := 1.2
