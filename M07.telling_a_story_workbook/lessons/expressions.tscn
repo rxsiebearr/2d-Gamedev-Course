@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cjgalrqf1by6a"]
+[gd_scene load_steps=8 format=3 uid="uid://cjgalrqf1by6a"]
 
 [ext_resource type="Theme" uid="uid://chbtl7pfpvugs" path="res://lessons/main_theme.tres" id="1_i3pcj"]
 [ext_resource type="Script" path="res://lessons/expressions.gd" id="2_lndt3"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bwv3fpaugnj5n" path="res://assets/looopy.png" id="4_2kfjs"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_msqr0"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_fgy04"]
-[ext_resource type="StyleBox" uid="uid://ldrn3gpt6b6e" path="res://lessons/button_grey.tres" id="7_iakwp"]
-[ext_resource type="StyleBox" uid="uid://8eldg8wevhor" path="res://lessons/button_black.tres" id="8_pi3su"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vkatl"]
 shader = ExtResource("3_w01ni")
@@ -15,68 +13,6 @@ shader_parameter/bg_color = Color(0.967826, 0.757081, 0.873908, 1)
 shader_parameter/pattern_color = Color(0.992353, 0.94601, 0.970321, 1)
 shader_parameter/pattern_size = 150.0
 shader_parameter/pattern_sampler = ExtResource("4_2kfjs")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mah4u"]
-content_margin_left = 22.0
-content_margin_top = 15.0
-content_margin_right = 22.0
-content_margin_bottom = 18.0
-bg_color = Color(0, 0, 0, 0.352941)
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6il7"]
-content_margin_left = 22.0
-content_margin_top = 15.0
-content_margin_right = 22.0
-content_margin_bottom = 18.0
-draw_center = false
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.662745, 0.0235294, 0.45098, 1)
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
-
-[sub_resource type="Theme" id="Theme_b7yud"]
-Button/styles/disabled = SubResource("StyleBoxFlat_mah4u")
-Button/styles/focus = SubResource("StyleBoxFlat_u6il7")
-Button/styles/hover = ExtResource("7_iakwp")
-Button/styles/normal = ExtResource("8_pi3su")
-Button/styles/pressed = ExtResource("7_iakwp")
-
-[sub_resource type="Theme" id="Theme_psd8q"]
-Button/styles/disabled = SubResource("StyleBoxFlat_mah4u")
-Button/styles/focus = SubResource("StyleBoxFlat_u6il7")
-Button/styles/hover = ExtResource("7_iakwp")
-Button/styles/normal = ExtResource("8_pi3su")
-Button/styles/pressed = ExtResource("7_iakwp")
-
-[sub_resource type="Theme" id="Theme_nnfa5"]
-Button/styles/disabled = SubResource("StyleBoxFlat_mah4u")
-Button/styles/focus = SubResource("StyleBoxFlat_u6il7")
-Button/styles/hover = ExtResource("7_iakwp")
-Button/styles/normal = ExtResource("8_pi3su")
-Button/styles/pressed = ExtResource("7_iakwp")
-
-[sub_resource type="Theme" id="Theme_68xm1"]
-Button/styles/disabled = SubResource("StyleBoxFlat_mah4u")
-Button/styles/focus = SubResource("StyleBoxFlat_u6il7")
-Button/styles/hover = ExtResource("7_iakwp")
-Button/styles/normal = ExtResource("8_pi3su")
-Button/styles/pressed = ExtResource("7_iakwp")
-
-[sub_resource type="Theme" id="Theme_r81ns"]
-Button/styles/disabled = SubResource("StyleBoxFlat_mah4u")
-Button/styles/focus = SubResource("StyleBoxFlat_u6il7")
-Button/styles/hover = ExtResource("7_iakwp")
-Button/styles/normal = ExtResource("8_pi3su")
-Button/styles/pressed = ExtResource("7_iakwp")
 
 [node name="Expressions" type="Control"]
 layout_mode = 3
@@ -131,38 +67,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_group_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="RowBodies" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="ButtonSophia" type="Button" parent="VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
+[node name="RowExpressions" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_b7yud")
-text = "Sophia"
-
-[node name="ButtonPink" type="Button" parent="VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = SubResource("Theme_psd8q")
-text = "Pink"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="ButtonRegular" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = SubResource("Theme_nnfa5")
-text = "Regular"
-
-[node name="ButtonSad" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = SubResource("Theme_68xm1")
-text = "Sad"
-
-[node name="ButtonHappy" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = SubResource("Theme_r81ns")
-text = "Happy"
