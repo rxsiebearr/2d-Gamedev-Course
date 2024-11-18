@@ -65,6 +65,7 @@ func show_text() -> void:
 	var sound_start_position := randf() * sound_max_length
 	audio_stream_player.play(sound_start_position)
 	tween.finished.connect(audio_stream_player.stop)
+	slide_in()
 	
 func _ready() -> void:
 	show_text()
@@ -77,3 +78,11 @@ func advance() -> void:
 	else: 
 		show_text()
 	
+func slide_in() -> void:
+	var tween := create_tween()
+	tween.set_trans(Tween.TRANS_QUART)
+	tween.set_ease(Tween.EASE_OUT)
+	body.position.x = 200.0
+	tween.tween_property(body, "position:x", 0.0, 0.3)
+	body.modulate.a = 0.0
+	tween.parallel().tween_property(body, "modulate:a", 1.0, 0.2)
