@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1oxblyn5sdsa"]
+[gd_scene load_steps=16 format=3 uid="uid://b1oxblyn5sdsa"]
 
 [ext_resource type="Theme" uid="uid://chbtl7pfpvugs" path="res://lessons/main_theme.tres" id="1_05mgn"]
 [ext_resource type="Shader" path="res://assets/sliding_background.gdshader" id="1_et5t6"]
@@ -50,6 +50,12 @@ Button/styles/focus = SubResource("StyleBoxFlat_u6il7")
 Button/styles/hover = ExtResource("7_kdk5y")
 Button/styles/normal = ExtResource("6_0w8t0")
 Button/styles/pressed = ExtResource("7_kdk5y")
+
+[sub_resource type="InputEventAction" id="InputEventAction_pd8pb"]
+action = &"advance_text"
+
+[sub_resource type="Shortcut" id="Shortcut_e7hu7"]
+events = [SubResource("InputEventAction_pd8pb")]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -136,6 +142,7 @@ offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = SubResource("Theme_knmjv")
+shortcut = SubResource("Shortcut_e7hu7")
 text = "next
 "
 
