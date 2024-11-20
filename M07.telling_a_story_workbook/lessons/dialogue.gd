@@ -19,62 +19,62 @@ var bodies := {
 var dialogue_items: Array[Dictionary] = [
 {
 	"expression": expressions["happy"],
-	"text": "LALALALA",
+	"text": "[rainbow val = 0.8]LALALALA[/rainbow]",
 	"character": bodies["sophia"],
 },
 {
 	"expression": expressions["happy"],
-	"text": "LALALALA",
+	"text": "[wave][rainbow val = 0.8]LALALALA[/rainbow][/wave]",
 	"character": bodies["pink"],
 },
 {
 	"expression": expressions["regular"],
-	"text": "Elmos World!",
+	"text": "[tornado freq = 1.0]Elmos World![/tornado]",
 	"character": bodies["sophia"],
 },
 {
 	"expression": expressions["regular"],
-	"text": "(Elmos World!)",
+	"text": "[shake](Elmos World!)[/shake]",
 	"character": bodies["pink"],
 },
 {
 	"expression": expressions["happy"],
-	"text": "LALALALA",
+	"text": "[b][rainbow val = 0.8]LALALALA[/rainbow][/b]",
 	"character": bodies["sophia"],
 },
 {
 	"expression": expressions["happy"],
-	"text": "LALALALA",
+	"text": "[b][rainbow val = 0.8][i]LALALALA[/i][/rainbow][/b]",
 	"character": bodies["pink"],
 },
 {
 	"expression": expressions["regular"],
-	"text": "Elmos World! (Elmos World)",
+	"text": "[wave]Elmos World! (Elmos World)[/wave]",
 	"character": bodies["sophia"],
 },
 {
 	"expression": expressions["sad"],
-	"text": "Elmo loves his goldfish!",
+	"text": "[color=FF8C00]Elmo loves his goldfish![/color]",
 	"character": bodies["pink"],
 },
 {	
 	"expression": expressions["happy"],
-	"text": "His crayon too!",
+	"text": "[color=FF0000]His crayon too![/color]",
 	"character": bodies["sophia"],
 },
 {
 	"expression": expressions["regular"],
-	"text": "...",
+	"text": "[rainbow val = 0.8]...[/rainbow]",
 	"character": bodies["sophia"]
 },
 {
 	"expression": expressions["happy"],
-	"text": "And that's Elmo's World!!",
+	"text": "[color=FF69B4]And that's Elmo's World!![/color]",
 	"character": bodies["pink"],
 },
 {
 	"expression": expressions["happy"],
-	"text": "YEAH!",
+	"text": "[b][color=00BFFF]YEAH![/color][b]",
 	"character": bodies["sophia"],
 }
 ]
