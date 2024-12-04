@@ -63,13 +63,13 @@ stretch_mode = 5
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.75
+anchor_left = 0.665
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -360.0
-offset_top = 148.0
-offset_right = -176.0
-offset_bottom = -106.0
+offset_left = -332.8
+offset_top = 147.0
+offset_right = -312.0
+offset_bottom = -107.0
 mouse_filter = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
