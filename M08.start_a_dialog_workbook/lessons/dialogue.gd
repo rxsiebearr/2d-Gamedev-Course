@@ -66,8 +66,20 @@ var dialogue_items: Array[Dictionary] = [
 
 func _ready() -> void:
 	show_text(0)
+	create_buttons({
+		"yes": 1,
+		"no": 2,
+	})
 
-
+func create_buttons(choices_data: Dictionary) -> void:
+	for button in action_buttons_v_box_container.get_children():
+		button.queue_free()
+	for choice_text in choices_data:
+			var button := Button.new()
+			action_buttons_v_box_container.add_child(button)
+			button.text = choice_text 
+			var target_line_idx: int = choices_data[choice_text]
+			button.pressed.connect(show_text.bind(target_line_idx))
 ## Draws the current text to the rich text element
 func show_text(current_item_index: int) -> void:
 	# We retrieve the current item from the array
