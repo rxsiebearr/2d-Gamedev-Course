@@ -67,9 +67,9 @@ anchor_left = 0.665
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -332.8
-offset_top = 147.0
-offset_right = -312.0
-offset_bottom = -107.0
+offset_top = 101.0
+offset_right = -98.0
+offset_bottom = -80.0
 mouse_filter = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
@@ -83,18 +83,6 @@ fit_content = true
 
 [node name="ActionButtonsVBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-
-[node name="Button" type="Button" parent="VBoxContainer/ActionButtonsVBoxContainer"]
-layout_mode = 2
-text = "e"
-
-[node name="Button2" type="Button" parent="VBoxContainer/ActionButtonsVBoxContainer"]
-layout_mode = 2
-text = "e"
-
-[node name="Button3" type="Button" parent="VBoxContainer/ActionButtonsVBoxContainer"]
-layout_mode = 2
-text = "e"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true

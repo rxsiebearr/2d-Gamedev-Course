@@ -27,7 +27,7 @@ var dialogue_items: Array[Dictionary] = [
 },
 {
 	"expression": expressions["happy"],
-	"text": "[wave][rainbow val = 0.8]Ready? Solve this problem: 5 + 2[/rainbow][/wave]",
+	"text": "[wave][rainbow val = 0.8]Ready? Solve this problem:[/rainbow][/wave][b] 5 + 2[/b]",
 	"character": bodies["pink"],
 	"choices": {
 		"7": 4,
@@ -38,7 +38,7 @@ var dialogue_items: Array[Dictionary] = [
 },
 {
 	"expression": expressions["regular"],
-	"text": "[tornado freq = 1.0]Too bad! You're doing it anyways![/tornado]",
+	"text": "[color=D2042D]Too bad! You're doing it anyways![/color]",
 	"character": bodies["sophia"],
 	"choices": {
 		"Fine": 1,
@@ -46,11 +46,11 @@ var dialogue_items: Array[Dictionary] = [
 	},
 },
 {
-	"expression": expressions["regular"],
-	"text": "[shake]That's not right ( ◡̀_◡́) [/shake]",
+	"expression": expressions["sad"],
+	"text": "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]",
 	"character": bodies["pink"],
 	"choices": {
-		"oh potatoes :( REDEMPTION!!! (⸝⸝⸝╸▵╺⸝⸝⸝) ": 7,
+		"oh potatoes :( REDEMPTION!!! (⸝⸝⸝╸▵╺⸝⸝⸝) ": 5,
 	},
 },
 {
@@ -62,41 +62,34 @@ var dialogue_items: Array[Dictionary] = [
 	},
 },
 {
-	"expression": expressions["happy"],
-	"text": "[b][rainbow val = 0.8][i]LALALALA[/i][/rainbow][/b]",
-	"character": bodies["pink"],
-},
-{
 	"expression": expressions["regular"],
-	"text": "[wave]Elmos World! (Elmos World)[/wave]",
-	"character": bodies["sophia"],
+	"text": "[color=6F4E37][i]A car is driving on the freeway. The equation that represents his speed can be wrriten as [b]v(t) = 6x^2 + 10x + 8[/b]. What is the car's position at time [b]t = 3?[/b][/i][/color]",
+	"character": bodies["pink"],
+	"choices": {
+		"what": 6,
+		"2x^3 + 5x^2 + 8x = 123 m/s": 7,
+		"12x + 10 = 46 m/s": 6, 
+		"good bye": -1,
+	},
 },
 {
 	"expression": expressions["sad"],
-	"text": "[color=FF8C00]Elmo loves his goldfish![/color]",
+	"text": "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]",
 	"character": bodies["pink"],
+	"choices": {
+		"i give up good bye": -1,
+	},
 },
-{	
+{
 	"expression": expressions["happy"],
-	"text": "[color=FF0000]His crayon too![/color]",
+	"text": "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]",
 	"character": bodies["sophia"],
-},
-{
-	"expression": expressions["regular"],
-	"text": "[rainbow val = 0.8]...[/rainbow]",
-	"character": bodies["sophia"]
-},
-{
-	"expression": expressions["happy"],
-	"text": "[color=FF69B4]And that's Elmo's World!![/color]",
-	"character": bodies["pink"],
-},
-{
-	"expression": expressions["happy"],
-	"text": "[b][color=00BFFF]YEAH![/color][b]",
-	"character": bodies["sophia"],
+	"choices": {
+		"WOWOW IM SO SMART (̨̡⸝⸝´꒳`⸝⸝)̧̢ ": -1,
+	},
 }
 ]
+
 
 ## UI element that shows the texts
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
