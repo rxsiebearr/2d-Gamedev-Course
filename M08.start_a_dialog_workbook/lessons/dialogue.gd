@@ -124,9 +124,9 @@ func show_text(current_item_index: int) -> void:
 	# from the item, we extract the properties.
 	# We set the text to the rich text control
 	# And we set the appropriate expression texture
-	rich_text_label.text = current_item["text"]
-	expression_texture_rect.texture = current_item["expression"]
-	body.texture = current_item["character"]
+	rich_text_label.text = current_item.text
+	expression_texture_rect.texture = current_item.expression
+	body.texture = current_item.character
 	create_buttons(current_item["choices"])
 	# We set the initial visible ratio to the text to 0, so we can change it in the tween
 	rich_text_label.visible_ratio = 0.0
