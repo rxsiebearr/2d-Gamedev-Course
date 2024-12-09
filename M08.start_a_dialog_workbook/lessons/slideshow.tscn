@@ -1,12 +1,64 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqls3o5daeu2s"]
+[gd_scene load_steps=23 format=3 uid="uid://bqls3o5daeu2s"]
 
 [ext_resource type="Theme" uid="uid://cxm3e18skt2lj" path="res://lessons/assets/main_theme.tres" id="1_xdlv2"]
 [ext_resource type="Script" path="res://lessons/slideshow.gd" id="2_wbt3f"]
+[ext_resource type="Script" path="res://lessons/slideshow_entry.gd" id="3_n8fng"]
 [ext_resource type="Shader" path="res://assets/sliding_background.gdshader" id="3_qyyxv"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_s7o0p"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_omd3l"]
+[ext_resource type="Texture2D" uid="uid://dchimpdsnda13" path="res://assets/emotion_happy.png" id="5_wa0tw"]
+[ext_resource type="Texture2D" uid="uid://vb24hfgkeyti" path="res://assets/pink.png" id="6_e2082"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_vfoky"]
 [ext_resource type="AudioStream" uid="uid://chgko4hmxwxu5" path="res://assets/talking_synth.ogg" id="7_nppuw"]
+[ext_resource type="Texture2D" uid="uid://bhinvhx75etr2" path="res://assets/emotion_sad.png" id="8_mmacp"]
+
+[sub_resource type="Resource" id="Resource_5cuwr"]
+script = ExtResource("3_n8fng")
+expression = ExtResource("5_wa0tw")
+character = ExtResource("5_omd3l")
+text = "[rainbow val = 0.8]Hi! Wanna solve a math problem?[/rainbow]"
+
+[sub_resource type="Resource" id="Resource_2ap3x"]
+script = ExtResource("3_n8fng")
+expression = ExtResource("5_wa0tw")
+character = ExtResource("6_e2082")
+text = "[wave][rainbow val = 0.8]Ready? Solve this problem:[/rainbow][/wave][b] 5 + 2[/b]"
+
+[sub_resource type="Resource" id="Resource_0cdf0"]
+script = ExtResource("3_n8fng")
+expression = ExtResource("6_vfoky")
+character = ExtResource("5_omd3l")
+text = "[color=D2042D]Too bad! You're doing it anyways![/color]"
+
+[sub_resource type="Resource" id="Resource_evbj2"]
+script = ExtResource("3_n8fng")
+expression = ExtResource("8_mmacp")
+character = ExtResource("6_e2082")
+text = "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]"
+
+[sub_resource type="Resource" id="Resource_yq1f8"]
+script = ExtResource("3_n8fng")
+expression = ExtResource("5_wa0tw")
+character = ExtResource("5_omd3l")
+text = "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]"
+
+[sub_resource type="Resource" id="Resource_6bais"]
+script = ExtResource("3_n8fng")
+expression = ExtResource("6_vfoky")
+character = ExtResource("6_e2082")
+text = "[color=6F4E37][i]A car is driving on the freeway. The equation that represents his speed can be wrriten as [b]v(t) = 6x^2 + 10x + 8[/b]. What is the car's position at time [b]t = 3?[/b][/i][/color]"
+
+[sub_resource type="Resource" id="Resource_gaaps"]
+script = ExtResource("3_n8fng")
+expression = ExtResource("8_mmacp")
+character = ExtResource("6_e2082")
+text = "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]"
+
+[sub_resource type="Resource" id="Resource_ft6ou"]
+script = ExtResource("3_n8fng")
+expression = ExtResource("5_wa0tw")
+character = ExtResource("5_omd3l")
+text = "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efgpg"]
 shader = ExtResource("3_qyyxv")
@@ -30,6 +82,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xdlv2")
 script = ExtResource("2_wbt3f")
+dialogue_items = Array[ExtResource("3_n8fng")]([SubResource("Resource_5cuwr"), SubResource("Resource_2ap3x"), SubResource("Resource_0cdf0"), SubResource("Resource_evbj2"), SubResource("Resource_yq1f8"), SubResource("Resource_6bais"), SubResource("Resource_gaaps"), SubResource("Resource_ft6ou")])
 
 [node name="Background" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_efgpg")
