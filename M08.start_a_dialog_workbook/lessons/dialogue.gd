@@ -15,80 +15,82 @@ var bodies := {
 ## - expression: a [code]Texture[/code] containing an expression
 ## - text: a [code]String[/code] containing the text the character says
 ## - character: a [code]Texture[/code] representing the character
-var dialogue_items: Array[Dictionary] = [
-{
-	"expression": expressions["happy"],
-	"text": "[rainbow val = 0.8]Hi! Wanna solve a math problem?[/rainbow]",
-	"character": bodies["sophia"],
-	"choices": {
-		"Sure": 1,
-		"No go away": 2,
-	},
-},
-{
-	"expression": expressions["happy"],
-	"text": "[wave][rainbow val = 0.8]Ready? Solve this problem:[/rainbow][/wave][b] 5 + 2[/b]",
-	"character": bodies["pink"],
-	"choices": {
-		"7": 4,
-		"10": 3,
-		"25": 3,
-		"3": 3,
-	},
-},
-{
-	"expression": expressions["regular"],
-	"text": "[color=D2042D]Too bad! You're doing it anyways![/color]",
-	"character": bodies["sophia"],
-	"choices": {
-		"Fine": 1,
-		":(": 1,
-	},
-},
-{
-	"expression": expressions["sad"],
-	"text": "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]",
-	"character": bodies["pink"],
-	"choices": {
-		"oh potatoes :( REDEMPTION!!! (⸝⸝⸝╸▵╺⸝⸝⸝) ": 5,
-	},
-},
-{
-	"expression": expressions["happy"],
-	"text": "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]",
-	"character": bodies["sophia"],
-	"choices": {
-		"YAYAY next problem please ₍₍ (̨̡⸝⸝´꒳`⸝⸝)̧̢ ₎₎ ": 5,
-	},
-},
-{
-	"expression": expressions["regular"],
-	"text": "[color=6F4E37][i]A car is driving on the freeway. The equation that represents his speed can be wrriten as [b]v(t) = 6x^2 + 10x + 8[/b]. What is the car's position at time [b]t = 3?[/b][/i][/color]",
-	"character": bodies["pink"],
-	"choices": {
-		"what": 6,
-		"2x^3 + 5x^2 + 8x = 123 m/s": 7,
-		"12x + 10 = 46 m/s": 6, 
-		"good bye": -1,
-	},
-},
-{
-	"expression": expressions["sad"],
-	"text": "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]",
-	"character": bodies["pink"],
-	"choices": {
-		"i give up good bye": -1,
-	},
-},
-{
-	"expression": expressions["happy"],
-	"text": "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]",
-	"character": bodies["sophia"],
-	"choices": {
-		"WOWOW IM SO SMART (̨̡⸝⸝´꒳`⸝⸝)̧̢ ": -1,
-	},
-}
-]
+@export var dialogue_items: Array[DialogueItem] = []
+
+#var dialogue_items: Array[Dictionary] = [
+#{
+#	"expression": expressions["happy"],
+#	"text": "[rainbow val = 0.8]Hi! Wanna solve a math problem?[/rainbow]",
+#	"character": bodies["sophia"],
+#	"choices": {
+#		"Sure": 1,
+#		"No go away": 2,
+#	},
+#},
+#{
+#	"expression": expressions["happy"],
+#	"text": "[wave][rainbow val = 0.8]Ready? Solve this problem:[/rainbow][/wave][b] 5 + 2[/b]",
+#	"character": bodies["pink"],
+#	"choices": {
+	#	"7": 4,
+#		"10": 3,
+#		"25": 3,
+	#	"3": 3,
+#	},
+#},
+#{
+#	"expression": expressions["regular"],
+#	"text": "[color=D2042D]Too bad! You're doing it anyways![/color]",
+#	"character": bodies["sophia"],
+#	"choices": {
+#		"Fine": 1,
+#		":(": 1,
+#	},
+#},
+#{
+#	"expression": expressions["sad"],
+#	"text": "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]",
+#	"character": bodies["pink"],
+#	"choices": {
+#		"oh potatoes :( REDEMPTION!!! (⸝⸝⸝╸▵╺⸝⸝⸝) ": 5,
+#	},
+#},
+#{
+#	"expression": expressions["happy"],
+#	"text": "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]",
+#	"character": bodies["sophia"],
+#	"choices": {
+#		"YAYAY next problem please ₍₍ (̨̡⸝⸝´꒳`⸝⸝)̧̢ ₎₎ ": 5,
+#	},
+#},
+#{
+#	"expression": expressions["regular"],
+#	"text": "[color=6F4E37][i]A car is driving on the freeway. The equation that represents his speed can be wrriten as [b]v(t) = 6x^2 + 10x + 8[/b]. What is the car's position at time [b]t = 3?[/b][/i][/color]",
+#	"character": bodies["pink"],
+#	"choices": {
+#		"what": 6,
+#		"2x^3 + 5x^2 + 8x = 123 m/s": 7,
+#		"12x + 10 = 46 m/s": 6, 
+#		"good bye": -1,
+#	},
+#},
+#{
+#	"expression": expressions["sad"],
+#	"text": "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]",
+#	"character": bodies["pink"],
+#	"choices": {
+#		"i give up good bye": -1,
+#	},
+#},
+#{
+#	"expression": expressions["happy"],
+#	"text": "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]",
+#	"character": bodies["sophia"],
+#	"choices": {
+#		"WOWOW IM SO SMART (̨̡⸝⸝´꒳`⸝⸝)̧̢ ": -1,
+#	},
+#}
+#]
 
 
 ## UI element that shows the texts
@@ -105,18 +107,18 @@ var dialogue_items: Array[Dictionary] = [
 func _ready() -> void:
 	show_text(0)
 
-func create_buttons(choices_data: Dictionary) -> void:
+func create_buttons(buttons_data: Array[DialogueChoice]) -> void:
 	for button in action_buttons_v_box_container.get_children():
 		button.queue_free()
-	for choice_text in choices_data:
+	for choice in buttons_data:
 			var button := Button.new()
 			action_buttons_v_box_container.add_child(button)
-			button.text = choice_text 
-			var target_line_idx: int = choices_data[choice_text]
-			if target_line_idx == -1:
+			button.text = choice.text 
+			if choice.is_quit == true:
 				button.pressed.connect(get_tree().quit)
 			else:
-				button.pressed.connect(show_text.bind(target_line_idx))
+				var target_line_id := choice.target_line_idx
+				button.pressed.connect(show_text.bind(target_line_id))
 ## Draws the current text to the rich text element
 func show_text(current_item_index: int) -> void:
 	# We retrieve the current item from the array
@@ -127,7 +129,7 @@ func show_text(current_item_index: int) -> void:
 	rich_text_label.text = current_item.text
 	expression_texture_rect.texture = current_item.expression
 	body.texture = current_item.character
-	create_buttons(current_item["choices"])
+	create_buttons(current_item.choices)
 	# We set the initial visible ratio to the text to 0, so we can change it in the tween
 	rich_text_label.visible_ratio = 0.0
 	# We create a tween that will draw the text
@@ -148,7 +150,12 @@ func show_text(current_item_index: int) -> void:
 	audio_stream_player.play(sound_start_position)
 	# We make sure the sound stops when the text finishes displaying
 	tween.finished.connect(audio_stream_player.stop)
-
+	for button: Button in action_buttons_v_box_container.get_children():
+		button.disabled = true
+	tween.finished.connect( func() -> void:
+		for button: Button in action_buttons_v_box_container.get_children():
+			button.disabled = false
+	)
 	# We animate the character sliding in.
 	slide_in()
 	for button: Button in action_buttons_v_box_container.get_children():

@@ -1,12 +1,169 @@
-[gd_scene load_steps=9 format=3 uid="uid://chprvwfixox2y"]
+[gd_scene load_steps=38 format=3 uid="uid://chprvwfixox2y"]
 
 [ext_resource type="Theme" uid="uid://cxm3e18skt2lj" path="res://lessons/assets/main_theme.tres" id="1_frglg"]
 [ext_resource type="Script" path="res://lessons/dialogue.gd" id="2_n1q1t"]
 [ext_resource type="Shader" path="res://assets/sliding_background.gdshader" id="3_3nfwl"]
+[ext_resource type="Script" path="res://lessons/dialogue_item.gd" id="3_n38mh"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_xuy0d"]
+[ext_resource type="Script" path="res://lessons/dialogue_choice.gd" id="5_6y5t0"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_g5y1a"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_bayqr"]
+[ext_resource type="Texture2D" uid="uid://dchimpdsnda13" path="res://assets/emotion_happy.png" id="6_i1w5b"]
 [ext_resource type="AudioStream" uid="uid://chgko4hmxwxu5" path="res://assets/talking_synth.ogg" id="7_1fga6"]
+[ext_resource type="Texture2D" uid="uid://vb24hfgkeyti" path="res://assets/pink.png" id="7_o1tso"]
+[ext_resource type="Texture2D" uid="uid://bhinvhx75etr2" path="res://assets/emotion_sad.png" id="9_554lk"]
+
+[sub_resource type="Resource" id="Resource_vq5rw"]
+script = ExtResource("5_6y5t0")
+text = "Sure"
+target_line_idx = 1
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_g0qwd"]
+script = ExtResource("5_6y5t0")
+text = "No go away"
+target_line_idx = 2
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_btdj8"]
+script = ExtResource("3_n38mh")
+choices = Array[ExtResource("5_6y5t0")]([SubResource("Resource_vq5rw"), SubResource("Resource_g0qwd")])
+expression = ExtResource("6_i1w5b")
+character = ExtResource("5_g5y1a")
+text = "[rainbow val = 0.8]Hi! Wanna solve a math problem?[/rainbow]"
+
+[sub_resource type="Resource" id="Resource_d4rg8"]
+script = ExtResource("5_6y5t0")
+text = "7"
+target_line_idx = 4
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_j8n73"]
+script = ExtResource("5_6y5t0")
+text = "10"
+target_line_idx = 3
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_ppoy0"]
+script = ExtResource("5_6y5t0")
+text = "25"
+target_line_idx = 3
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_2l3g0"]
+script = ExtResource("5_6y5t0")
+text = "3"
+target_line_idx = 3
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_i8xjq"]
+script = ExtResource("3_n38mh")
+choices = Array[ExtResource("5_6y5t0")]([SubResource("Resource_d4rg8"), SubResource("Resource_j8n73"), SubResource("Resource_ppoy0"), SubResource("Resource_2l3g0")])
+expression = ExtResource("6_i1w5b")
+character = ExtResource("7_o1tso")
+text = "[wave][rainbow val = 0.8]Ready? Solve this problem:[/rainbow][/wave][b] 5 + 2[/b]"
+
+[sub_resource type="Resource" id="Resource_b486u"]
+script = ExtResource("5_6y5t0")
+text = "Fine"
+target_line_idx = 2
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_xhats"]
+script = ExtResource("5_6y5t0")
+text = ":("
+target_line_idx = 1
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_dxu21"]
+script = ExtResource("3_n38mh")
+choices = Array[ExtResource("5_6y5t0")]([SubResource("Resource_b486u"), SubResource("Resource_xhats")])
+expression = ExtResource("6_bayqr")
+character = ExtResource("5_g5y1a")
+text = "[color=D2042D]Too bad! You're doing it anyways![/color]"
+
+[sub_resource type="Resource" id="Resource_mshlw"]
+script = ExtResource("5_6y5t0")
+text = "oh potatoes :( REDEMPTION!!! (⸝⸝⸝╸▵╺⸝⸝⸝) "
+target_line_idx = 5
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_ui3ml"]
+script = ExtResource("3_n38mh")
+choices = Array[ExtResource("5_6y5t0")]([SubResource("Resource_mshlw")])
+expression = ExtResource("9_554lk")
+character = ExtResource("7_o1tso")
+text = "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]"
+
+[sub_resource type="Resource" id="Resource_gitb2"]
+script = ExtResource("5_6y5t0")
+text = "YAYAY next problem please ₍₍ (̨̡⸝⸝´꒳`⸝⸝)̧̢ ₎₎ "
+target_line_idx = 5
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_80nwb"]
+script = ExtResource("3_n38mh")
+choices = Array[ExtResource("5_6y5t0")]([SubResource("Resource_gitb2")])
+expression = ExtResource("6_i1w5b")
+character = ExtResource("5_g5y1a")
+text = "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]"
+
+[sub_resource type="Resource" id="Resource_mv5m0"]
+script = ExtResource("5_6y5t0")
+text = "what"
+target_line_idx = 6
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_gmugo"]
+script = ExtResource("5_6y5t0")
+text = "2x^3 + 5x^2 + 8x = 123 m/s"
+target_line_idx = 7
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_hfvvy"]
+script = ExtResource("5_6y5t0")
+text = "12x + 10 = 46 m/s"
+target_line_idx = 6
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_kgfkw"]
+script = ExtResource("5_6y5t0")
+text = "good bye"
+target_line_idx = 0
+is_quit = true
+
+[sub_resource type="Resource" id="Resource_b7ax5"]
+script = ExtResource("3_n38mh")
+choices = Array[ExtResource("5_6y5t0")]([SubResource("Resource_mv5m0"), SubResource("Resource_gmugo"), SubResource("Resource_hfvvy"), SubResource("Resource_kgfkw")])
+expression = ExtResource("6_bayqr")
+character = ExtResource("7_o1tso")
+text = "[color=6F4E37][i]A car is driving on the freeway. The equation that represents his speed can be wrriten as [b]v(t) = 6x^2 + 10x + 8[/b]. What is the car's position at time [b]t = 3?[/b][/i][/color]"
+
+[sub_resource type="Resource" id="Resource_6hwlc"]
+script = ExtResource("5_6y5t0")
+text = "i give up good bye"
+target_line_idx = 0
+is_quit = true
+
+[sub_resource type="Resource" id="Resource_bri2t"]
+script = ExtResource("3_n38mh")
+choices = Array[ExtResource("5_6y5t0")]([SubResource("Resource_6hwlc")])
+expression = ExtResource("9_554lk")
+character = ExtResource("7_o1tso")
+text = "[shake][color=F8C8DC]That's not right ( ◡̀_◡́)[/color][/shake]"
+
+[sub_resource type="Resource" id="Resource_u75gk"]
+script = ExtResource("5_6y5t0")
+text = "WOWOW IM SO SMART (̨̡⸝⸝´꒳`⸝⸝)̧̢ "
+target_line_idx = 0
+is_quit = true
+
+[sub_resource type="Resource" id="Resource_a0oja"]
+script = ExtResource("3_n38mh")
+choices = Array[ExtResource("5_6y5t0")]([SubResource("Resource_u75gk")])
+expression = ExtResource("6_i1w5b")
+character = ExtResource("5_g5y1a")
+text = "[b][rainbow val = 0.8]Correct! ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ [/rainbow][/b]"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efgpg"]
 shader = ExtResource("3_3nfwl")
@@ -24,6 +181,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_frglg")
 script = ExtResource("2_n1q1t")
+dialogue_items = Array[ExtResource("3_n38mh")]([SubResource("Resource_btdj8"), SubResource("Resource_i8xjq"), SubResource("Resource_dxu21"), SubResource("Resource_ui3ml"), SubResource("Resource_80nwb"), SubResource("Resource_b7ax5"), SubResource("Resource_bri2t"), SubResource("Resource_a0oja")])
 
 [node name="Background" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_efgpg")
