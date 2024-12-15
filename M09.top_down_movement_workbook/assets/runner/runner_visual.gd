@@ -5,6 +5,7 @@
 @tool
 class_name RunnerVisual extends Node2D
 
+
 ## Use this enum to tell the runner which animation to play.
 enum Animations {
 	## A standing animation.
