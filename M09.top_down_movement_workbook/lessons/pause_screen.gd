@@ -1,4 +1,3 @@
-@tool
 extends Control
 
 @onready var _blur_color_rect = %BlurColorRect
@@ -6,7 +5,7 @@ extends Control
 
 @export_range(0,1.0) var menu_opened_amount := 0.0:
 	set = set_menu_opened_amount
-	
+@export_range(0.1, 10.0, 0.01, "or_greater") var animation_duration := 2.3
 func set_menu_opened_amount(amount:float) -> void:
 	menu_opened_amount = amount
 	visible = amount > 0

@@ -44,9 +44,9 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_hsd2m")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iw8sy"]
 shader = ExtResource("2_ithuw")
-shader_parameter/blur_amount = 5.21
+shader_parameter/blur_amount = 0.0
 shader_parameter/tint = Color(0, 0, 0, 1)
-shader_parameter/tint_strength = 0.308
+shader_parameter/tint_strength = 0.0
 shader_parameter/saturation = 1.0
 
 [node name="PauseScreen" type="Control"]
