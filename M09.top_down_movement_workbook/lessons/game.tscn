@@ -16,6 +16,7 @@ z_index = -1
 texture = ExtResource("1_4bdau")
 
 [node name="Runner" parent="." instance=ExtResource("1_xb7v5")]
+unique_name_in_owner = true
 position = Vector2(-1312, -40)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_qukli")]
