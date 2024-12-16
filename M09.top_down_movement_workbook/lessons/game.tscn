@@ -76,4 +76,5 @@ vertical_alignment = 1
 script = ExtResource("8_cv4bv")
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("9_h774e")]
+process_mode = 3
 visible = false
