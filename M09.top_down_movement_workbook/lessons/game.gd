@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var _finish_line = %FinishLine
+@onready var _runner = %Runner
+@onready var _count_down = %CountDown
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,4 +22,10 @@ func _ready() -> void:
 	)
 	_finish_line.confettis_finished.connect(
 		get_tree().reload_current_scene
+	)
+	_count_down.start_counting()
+	_runner.set_physics_process(false)
+	_count_down.counting_finished.connect(
+		func() -> void:
+			_runner.set_physics_process(true)
 	)

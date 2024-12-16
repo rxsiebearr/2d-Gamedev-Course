@@ -40,7 +40,7 @@ func walk_to(destination_global_position: Vector2) -> void:
 	var tween = create_tween()
 	tween.tween_property(self, "global_position", destination_global_position, duration)
 	tween.finished.connect(func():
-		_runner_visual.animation_name = RunnerVisual.Animations.WALK
+		_runner_visual.animation_name = RunnerVisual.Animations.IDLE
 		_dust.emitting = false
 		walked_to.emit()
 	)
