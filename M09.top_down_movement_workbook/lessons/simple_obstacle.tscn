@@ -8,10 +8,10 @@ size = Vector2(128.5, 105)
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 74)
+position = Vector2(0, 39)
 texture = ExtResource("1_06571")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.75, 74)
+position = Vector2(0.75, 39)
 shape = SubResource("RectangleShape2D_favcq")
 debug_color = Color(0.916585, 0.133757, 0.626969, 0.42)
