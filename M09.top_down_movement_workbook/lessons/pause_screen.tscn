@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://drdhg1k6ukxym"]
+
+[ext_resource type="FontFile" uid="uid://vxbfcnef0pvq" path="res://assets/fonts/rubik/Rubik-Bold.ttf" id="1_tqdfu"]
+[ext_resource type="Script" path="res://lessons/pause_screen.gd" id="2_a415w"]
+[ext_resource type="Shader" path="res://assets/blur.gdshader" id="2_ithuw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjwri"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.990845, 0.882813, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8k4fu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsd2m"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.105469, 0.0440826, 0.0440826, 0.545098)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 20.0
+
+[sub_resource type="Theme" id="Theme_00k4w"]
+default_font = ExtResource("1_tqdfu")
+default_font_size = 42
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_xjwri")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 64
+Label/styles/normal = SubResource("StyleBoxEmpty_8k4fu")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_hsd2m")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iw8sy"]
+shader = ExtResource("2_ithuw")
+shader_parameter/blur_amount = 5.21
+shader_parameter/tint = Color(0, 0, 0, 1)
+shader_parameter/tint_strength = 0.308
+shader_parameter/saturation = 1.0
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_00k4w")
+script = ExtResource("2_a415w")
+
+[node name="BlurColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_iw8sy")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UIPanelContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -244.0
+offset_right = 216.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIPanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIPanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+text = "PAUSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="UIPanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIPanelContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="UIPanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="QuitButton2" type="Button" parent="UIPanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
