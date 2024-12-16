@@ -9,6 +9,7 @@
 ## [br]
 ## [b]Note[/b]: Any text written in the editor will be removed when [member start_counting]
 ## runs.
+
 @tool
 @icon("count_down.svg")
 class_name CountDown
