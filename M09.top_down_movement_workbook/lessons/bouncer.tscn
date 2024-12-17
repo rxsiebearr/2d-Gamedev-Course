@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cead1vrrh5cip"]
+[gd_scene load_steps=15 format=3 uid="uid://cead1vrrh5cip"]
 
 [ext_resource type="Script" path="res://lessons/bouncer.gd" id="1_1jpe7"]
 [ext_resource type="Texture2D" uid="uid://dbcmxo51msi8m" path="res://assets/runner/shadow.png" id="2_uq17e"]
@@ -39,6 +39,9 @@ shader_parameter/line_thickness = 3.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_tok7t"]
 viewport_path = NodePath("SubViewport")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ggi8w"]
+radius = 29.0
 
 [node name="Bouncer" type="CharacterBody2D"]
 motion_mode = 1
@@ -85,3 +88,10 @@ target_position = Vector2(100, 0)
 [node name="RayCast2D2" type="RayCast2D" parent="Raycasts"]
 rotation = 2.35619
 target_position = Vector2(100, 0)
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(1, -18)
+shape = SubResource("CircleShape2D_ggi8w")

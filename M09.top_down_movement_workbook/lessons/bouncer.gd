@@ -7,7 +7,14 @@ extends CharacterBody2D
 @onready var _dust: GPUParticles2D = %Dust
 @onready var _runner_visual: RunnerVisual = %RunnerVisualPurple
 @onready var _raycasts: Node2D = %Raycasts
+@onready var _hit_box: Area2D = %HitBox
 
+func _ready() -> void:
+	_hit_box.body_entered.connect(func(body: Node) -> void:
+		if body is Runner:
+			get_tree().call_deferred("reload_current_scene")
+	)
+	
 func _physics_process(delta: float) -> void:
 	var direction := global_position.direction_to(get_global_player_position())
 	var distance := global_position.distance_to(get_global_player_position())
