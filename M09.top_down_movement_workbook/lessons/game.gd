@@ -3,8 +3,8 @@ extends Node2D
 @onready var _finish_line = %FinishLine
 @onready var _runner = %Runner
 @onready var _count_down = %CountDown
+@onready var _bouncer = %Bouncer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_finish_line.body_entered.connect(func (body: Node) -> void:
 		if body is not Runner:
@@ -28,4 +28,11 @@ func _ready() -> void:
 	_count_down.counting_finished.connect(
 		func() -> void:
 			_runner.set_physics_process(true)
+	)
+	
+	_bouncer.set_physics_process(false)
+
+	_count_down.counting_finished.connect(
+		func() -> void:
+			_bouncer.set_physics_process(true)
 	)

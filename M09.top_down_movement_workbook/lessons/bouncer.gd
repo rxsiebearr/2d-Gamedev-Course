@@ -8,8 +8,8 @@ extends CharacterBody2D
 @onready var _runner_visual: RunnerVisual = %RunnerVisualPurple
 
 func _physics_process(delta: float) -> void:
-	var direction := global_position.direction_to(get_global_mouse_position())
-	var distance := global_position.distance_to(get_global_mouse_position())
+	var direction := global_position.direction_to(get_global_player_position())
+	var distance := global_position.distance_to(get_global_player_position())
 	var speed := max_speed if distance > 100 else max_speed * distance / 100
 	var desired_velocity := direction * speed
 	velocity = velocity.move_toward(desired_velocity, acceleration * delta)
@@ -28,3 +28,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		_runner_visual.animation_name = RunnerVisual.Animations.IDLE
 		_dust.emitting = false
+
+func get_global_player_position() -> Vector2:
+	return get_tree().root.get_node("Game/Runner").global_position

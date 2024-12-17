@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://nvj6q7wrkqv8"]
+[gd_scene load_steps=11 format=3 uid="uid://nvj6q7wrkqv8"]
 
 [ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="1_4bdau"]
 [ext_resource type="Script" path="res://lessons/game.gd" id="1_hgiox"]
 [ext_resource type="PackedScene" uid="uid://ui02xys28x3m" path="res://lessons/runner.tscn" id="1_xb7v5"]
 [ext_resource type="PackedScene" uid="uid://8j8up7esdjy3" path="res://lessons/simple_obstacle.tscn" id="2_qukli"]
+[ext_resource type="PackedScene" uid="uid://cead1vrrh5cip" path="res://lessons/bouncer.tscn" id="3_o16s1"]
 [ext_resource type="PackedScene" uid="uid://b46kqwxwnr51a" path="res://lessons/circuit.tscn" id="4_l7wex"]
 [ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="5_pe1gr"]
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="7_pnmka"]
@@ -20,7 +21,11 @@ texture = ExtResource("1_4bdau")
 
 [node name="Runner" parent="." instance=ExtResource("1_xb7v5")]
 unique_name_in_owner = true
-position = Vector2(-1312, -40)
+position = Vector2(1292, 98)
+
+[node name="Bouncer" parent="." instance=ExtResource("3_o16s1")]
+unique_name_in_owner = true
+position = Vector2(1296, -256)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_qukli")]
 position = Vector2(85, -150)
@@ -41,7 +46,10 @@ position = Vector2(1002, -692)
 position = Vector2(-377, -944)
 
 [node name="StaticBody2D7" parent="." instance=ExtResource("2_qukli")]
-position = Vector2(-1400, -297)
+position = Vector2(-1415, -285)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("2_qukli")]
+position = Vector2(-1152, -323)
 
 [node name="StaticBody2D8" parent="." instance=ExtResource("2_qukli")]
 position = Vector2(-929, 654)
